@@ -17,6 +17,24 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	return;
 }
 
+/*========= Send Mail Ridwan Edit =========================*/
+add_action( 'phpmailer_init', 'my_phpmailer_example' );
+function my_phpmailer_example( $phpmailer ) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'smtp.gmail.com';
+    $phpmailer->SMTPAuth = true; // Force it to use Username and Password to authenticate
+    $phpmailer->Port = 587;
+    $phpmailer->Username = 'sun.rieagain@gmail.com';
+    $phpmailer->Password = 'rjnlrdinm';
+
+    // Additional settings…
+    $phpmailer->SMTPSecure = "tls"; // Choose SSL or TLS, if necessary for your server
+    // $phpmailer->From = "you@yourdomail.com";
+    $phpmailer->FromName = "Ridwan Hasanah";
+}
+
+/*=========================================================*/
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
