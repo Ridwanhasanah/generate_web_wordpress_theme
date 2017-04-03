@@ -30,7 +30,7 @@ function my_phpmailer_example( $phpmailer ) {
     // Additional settings…
     $phpmailer->SMTPSecure = "tls"; // Choose SSL or TLS, if necessary for your server
     // $phpmailer->From = "you@yourdomail.com";
-    $phpmailer->FromName = "Ridwan Hasanah";
+    $phpmailer->FromName = "QILATA";
 }
 
 /*=========================================================*/
